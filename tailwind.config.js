@@ -38,7 +38,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['var(--font-inter)', 'sans-serif'],
-      display: ['var(--font-montserrat)', 'sans-serif'],
+      opensauce: ['var(--font-opensauce)', 'sans-serif'],
     },
     extend: {
       boxShadow: {

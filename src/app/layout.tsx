@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter, Montserrat } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 export const inter = Inter({
@@ -8,12 +9,27 @@ export const inter = Inter({
   variable: '--font-inter',
 })
 
-// Load Montserrat for headings/display text
-export const montserrat = Montserrat({
-  subsets: ['latin'],
+export const openSauceOne = localFont({
+  src: [
+    {
+      path: '../../public/fonts/OpenSauceOne-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/OpenSauceOne-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/OpenSauceOne-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    // Add other weights if needed
+  ],
+  variable: '--font-opensauce',
   display: 'swap',
-  variable: '--font-montserrat',
-  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {
@@ -28,7 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${montserrat.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${openSauceOne.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
