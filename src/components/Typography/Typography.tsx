@@ -19,7 +19,9 @@ export const Typography = ({
   }
 
   return (
-    <Tag className={classNames(typographyStyles[Tag], className)}>
+    <Tag
+      className={classNames('font-opensauce', typographyStyles[Tag], className)}
+    >
       {children}
     </Tag>
   )
