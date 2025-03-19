@@ -10,7 +10,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      white:'#ffffff',
+      white: '#ffffff',
       primary: {
         DEFAULT: '#1E90FF', // Ocean blue
         light: '#4BA3FF',
